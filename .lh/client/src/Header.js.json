@@ -1,0 +1,18 @@
+{
+    "sourceFile": "client/src/Header.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738073560046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738073560046,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\n\r\nfunction Header({ startDate, endDate }) {\r\n  return (\r\n    <header>\r\n      <h1>Financial Data</h1>\r\n      <p>Showing data from {startDate} to {endDate}</p>\r\n    </header>\r\n  );\r\n}\r\n\r\nexport default Header;\r\n"
+        }
+    ]
+}

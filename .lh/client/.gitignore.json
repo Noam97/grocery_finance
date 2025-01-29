@@ -1,0 +1,18 @@
+{
+    "sourceFile": "client/.gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738134252165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738134252165,
+            "name": "Commit-0",
+            "content": "# Environment variables\n.env\n\n# Logs\nlogs/\n*.log\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\n\n# Dependency directories\nnode_modules/\n\n# Build output\ndist/\nbuild/\n\n# VS Code\n.vscode/\n\n# Optional npm cache directory\n.npm\n\n# Optional eslint cache\n.eslintcache\n\n# Optional REPL history\n.node_repl_history\n\n# IDEs and editors\n.idea/\n*.suo\n*.ntvs*\n*.njsproj\n*.sln\n*.sw?\n\n# Operating system files\n.DS_Store\nThumbs.db"
+        }
+    ]
+}

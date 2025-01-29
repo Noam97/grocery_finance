@@ -1,0 +1,18 @@
+{
+    "sourceFile": "client/src/DateRangeFilter.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738073500815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738073500815,
+            "name": "Commit-0",
+            "content": "import React, { useState } from 'react';\r\n\r\nfunction DateRangeFilter({ onFilterChange }) {\r\n  const [startDate, setStartDate] = useState('');\r\n  const [endDate, setEndDate] = useState('');\r\n\r\n  const handleSubmit = (e) => {\r\n    e.preventDefault();\r\n    // שלח את התאריכים למרכיב האב או API\r\n    onFilterChange({ startDate, endDate });\r\n  };\r\n\r\n  return (\r\n    <form onSubmit={handleSubmit}>\r\n      <label>\r\n        Start Date:\r\n        <input type=\"date\" value={startDate} onChange={(e) => setStartDate(e.target.value)} required />\r\n      </label>\r\n      <label>\r\n        End Date:\r\n        <input type=\"date\" value={endDate} onChange={(e) => setEndDate(e.target.value)} required />\r\n      </label>\r\n      <button type=\"submit\">Filter</button>\r\n    </form>\r\n  );\r\n}\r\n\r\nexport default DateRangeFilter;\r\n"
+        }
+    ]
+}

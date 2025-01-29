@@ -1,0 +1,30 @@
+{
+    "sourceFile": "server/.gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1738133997004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738134099144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n .env\r\n-.pa\n\\ No newline at end of file\n+pac\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738134104895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n .env\r\n-pac\n\\ No newline at end of file\n+package-lock.json\r\n+package\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738134143681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,40 @@\n+# Environment variables\r\n .env\r\n-package-lock.json\r\n\\ No newline at end of file\n-package\n+\r\n+# Logs\r\n+logs/\r\n+*.log\r\n+npm-debug.log*\r\n+yarn-debug.log*\r\n+yarn-error.log*\r\n+\r\n+# Dependency directories\r\n+node_modules/\r\n+\r\n+# Build output\r\n+dist/\r\n+build/\r\n+\r\n+# VS Code\r\n+.vscode/\r\n+\r\n+# Optional npm cache directory\r\n+.npm\r\n+\r\n+# Optional eslint cache\r\n+.eslintcache\r\n+\r\n+# Optional REPL history\r\n+.node_repl_history\r\n+\r\n+# IDEs and editors\r\n+.idea/\r\n+*.suo\r\n+*.ntvs*\r\n+*.njsproj\r\n+*.sln\r\n+*.sw?\r\n+\r\n+# Operating system files\r\n+.DS_Store\r\n+Thumbs.db\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1738133997004,
+            "name": "Commit-0",
+            "content": ".env\r\n.pa"
+        }
+    ]
+}

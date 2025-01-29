@@ -1,0 +1,18 @@
+{
+    "sourceFile": "client/src/FinancialChart.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738073526603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738073526603,
+            "name": "Commit-0",
+            "content": "import React, { useState, useEffect } from 'react';\r\nimport { Line } from 'react-chartjs-2';\r\nimport axios from 'axios';\r\n\r\nfunction FinancialChart({ startDate, endDate }) {\r\n  const [chartData, setChartData] = useState({\r\n    labels: [],\r\n    datasets: []\r\n  });\r\n\r\n  useEffect(() => {\r\n    if (startDate && endDate) {\r\n      axios.get('http://localhost:5000/api/data', {\r\n        params: { start: startDate, end: endDate }\r\n      })\r\n        .then(response => {\r\n          const data = response.data;\r\n          const labels = data.map(item => item.date);\r\n          const income = data.map(item => item.income);\r\n          const outcome = data.map(item => item.outcome);\r\n          const clear = data.map(item => item.clear);\r\n\r\n          setChartData({\r\n            labels: labels,\r\n            datasets: [\r\n              {\r\n                label: 'Income',\r\n                data: income,\r\n                borderColor: 'red',\r\n                backgroundColor: 'rgba(255, 99, 132, 0.2)',\r\n                fill: false\r\n              },\r\n              {\r\n                label: 'Outcome',\r\n                data: outcome,\r\n                borderColor: 'blue',\r\n                backgroundColor: 'rgba(54, 162, 235, 0.2)',\r\n                fill: false\r\n              },\r\n              {\r\n                label: 'Clear',\r\n                data: clear,\r\n                borderColor: 'green',\r\n                backgroundColor: 'rgba(75, 192, 192, 0.2)',\r\n                fill: false\r\n              }\r\n            ]\r\n          });\r\n        })\r\n        .catch(error => console.error('Error fetching chart data:', error));\r\n    }\r\n  }, [startDate, endDate]);\r\n\r\n  return <Line data={chartData} />;\r\n}\r\n\r\nexport default FinancialChart;\r\n"
+        }
+    ]
+}
