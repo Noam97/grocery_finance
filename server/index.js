@@ -51,27 +51,26 @@ client.connect()
     });
 
     app.get('/api/data', async (req, res) => {
+        const { start, end } = req.query;
         try {
-            const result = await client.query(`
-                SELECT DISTINCT date, income, outcome, clear
-                FROM financial_data
-                WHERE DATE(date) BETWEEN DATE '${startDate}' AND DATE '${endDate}'
-                ORDER BY date;
-            `);
-            console.log('Fetched data:', result.rows); // הדפסת הנתונים שהתקבלו
-            res.json(result.rows); // שלח את הנתונים ללקוח
+          const result = await client.query(`
+            SELECT DISTINCT date, income, outcome, clear
+            FROM financial_data
+            WHERE DATE(date) BETWEEN DATE '${start}' AND DATE '${end}'
+            ORDER BY date;
+          `);
+          console.log('Fetched data:', result.rows); 
+          res.json(result.rows); 
         } catch (error) {
-            console.error('Error fetching data:', error);
-            res.status(500).json({ error: 'Internal server error' });
+          console.error('Error fetching data:', error);
+          res.status(500).json({ error: 'Internal server error' });
         }
-    });
+      });
     
-// הפעלת השרת
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-// בדיקה אם החיבור למסד הנתונים עובד
 client.query('SELECT NOW()', (err, res) => {
     if (err) {
         console.error('Database connection failed:', err.stack);

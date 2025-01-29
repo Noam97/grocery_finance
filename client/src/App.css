@@ -37,9 +37,54 @@
   }
 }
 
-/* h1{
+.date-input {
+  font-family: 'Coiny', sans-serif; 
+  font-size: 13px; 
+  padding: 5px;
+}
+
+h1{
   font-size: 42px;
   text-transform: uppercase;
   text-align: center;
-  font-family: "Coiny", Arial, Helvetica, sans-serif;
-} */
+  font-family: "Coiny", sans-serif;
+}
+
+h2{
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family:  "Itim", sans-serif;
+}
+
+label{
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family:  "Itim", sans-serif;
+}
+
+p{
+  font-size: 20px;
+  line-height: 1.4;
+  font-family: "Itim";
+}
+
+.date-range-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.date-range-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.date-range-item label {
+  margin-bottom: 0.5rem;
+}
+
