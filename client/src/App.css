@@ -37,6 +37,16 @@
   }
 }
 
+body{
+  background-color:linear-gradient(135deg, #ff9a9e 50%, #fad0c4 99%, #fad0c4 100%);
+  background: linear-gradient(135deg, #ccb6cf 50%, #502e4d 99%, #fad0c4 100%);
+  height: 100vh; /* Ensure the background covers the full viewport height */
+  margin: 0; /* Remove default margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .date-input {
   font-family: 'Coiny', sans-serif; 
   font-size: 13px; 
@@ -48,6 +58,8 @@ h1{
   text-transform: uppercase;
   text-align: center;
   font-family: "Coiny", sans-serif;
+  color: #5e0375;
+  margin-bottom: 10px;
 }
 
 h2{
@@ -55,6 +67,8 @@ h2{
   text-transform: uppercase;
   text-align: center;
   font-family:  "Itim", sans-serif;
+  color: #5e0375;
+  margin-top: 5px;
 }
 
 label{
