@@ -12,8 +12,8 @@ CREATE TABLE financial_data (
 `;
 
 const insertSampleData = `
-INSERT INTO financial_data (date, income, outcome)
-VALUES
+    INSERT INTO financial_data (date, income, outcome)
+    VALUES
     ('2021-01-01', 1000.00, 400.00),
     ('2021-04-02', 1200.00, 500.00),
     ('2021-06-03', 1500.00, 600.00),

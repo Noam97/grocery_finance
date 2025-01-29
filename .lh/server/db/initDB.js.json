@@ -1,0 +1,18 @@
+{
+    "sourceFile": "server/db/initDB.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738194500450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738194500450,
+            "name": "Commit-0",
+            "content": "const client = require('./connection');\r\n\r\nconst createTableQuery = `\r\nDROP TABLE IF EXISTS financial_data;\r\nCREATE TABLE financial_data (\r\n    id SERIAL PRIMARY KEY,\r\n    date DATE NOT NULL UNIQUE,\r\n    income DECIMAL(10,2) NOT NULL,\r\n    outcome DECIMAL(10,2) NOT NULL,\r\n    clear DECIMAL(10,2) GENERATED ALWAYS AS (income - outcome) STORED\r\n);\r\n`;\r\n\r\nconst insertSampleData = `\r\n    INSERT INTO financial_data (date, income, outcome)\r\n    VALUES\r\n    ('2021-01-01', 1000.00, 400.00),\r\n    ('2021-04-02', 1200.00, 500.00),\r\n    ('2021-06-03', 1500.00, 600.00),\r\n    ('2021-07-04', 1300.00, 450.00),\r\n    ('2021-08-05', 1100.00, 500.00),\r\n    ('2021-09-06', 1000.00, 400.00),\r\n    ('2021-10-07', 900.00, 300.00),\r\n    ('2021-11-08', 800.00, 200.00),\r\n    ('2021-12-09', 700.00, 100.00)\r\n    ON CONFLICT (date) DO NOTHING;\r\n    `;\r\n\r\nconst initializeDatabase = async () => {\r\n    try {\r\n        await client.query(createTableQuery);\r\n        console.log(\"Table created or already exists.\");\r\n\r\n        const { rows } = await client.query(\"SELECT COUNT(*) FROM financial_data;\");\r\n        if (parseInt(rows[0].count, 10) === 0) {\r\n            await client.query(insertSampleData);\r\n            console.log(\"Sample data inserted.\");\r\n        } else {\r\n            console.log(\"Sample data already exists.\");\r\n        }\r\n    } catch (error) {\r\n        console.error(\"Error initializing database:\", error);\r\n    }\r\n};\r\n\r\nmodule.exports = initializeDatabase;\r\n"
+        }
+    ]
+}

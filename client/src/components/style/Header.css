@@ -1,6 +1,11 @@
+header {
+    position: sticky;
+    top: 0;
+    padding: 10px 20px;
+    text-align: center;
+  }
 
-  
-  .date-info p {
+ .date-info p {
     flex-grow: 1;
     text-align: center;
     margin: 0;
@@ -29,3 +34,4 @@
     transition: 0.3s;
     border-radius: 300px;
   }
+

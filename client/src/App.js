@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import FinancialChart from './components/FinancialChart';
 import Header from './components/Header';
-// import Footer from './components/Footer';
 
 import './App.css';
 
