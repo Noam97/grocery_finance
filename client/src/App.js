@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import DateRangeFilter from './components/DateRangeFilter';
 import FinancialChart from './components/FinancialChart';
 import Header from './components/Header';
 import './App.css';
@@ -20,11 +19,15 @@ function App() {
 
   return (
     <div className="App">
-      <Header startDate={formatDate(startDate)} endDate={formatDate(endDate)} />
-      <DateRangeFilter onFilterChange={handleFilterChange} />
+      <Header
+        startDate={formatDate(startDate)} 
+        endDate={formatDate(endDate)}
+        onFilterChange={handleFilterChange}
+      />
       <FinancialChart startDate={startDate} endDate={endDate} />
     </div>
   );
 }
+
 
 export default App;

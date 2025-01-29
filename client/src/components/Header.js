@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import DateRangeFilter from './DateRangeFilter';
 
-function Header({ startDate, endDate }) {
+
+function Header({ startDate, endDate, onFilterChange }) {
+  const [showFilter, setShowFilter] = useState(false);
+
+  const handleChangeRangesClick = () => {
+    setShowFilter(!showFilter); 
+  };
   return (
     <header>
       <h1>Small Grocery Shop</h1>
       <h2>Financial Data</h2>
-      <p>Showing financial data from {startDate} to {endDate}</p>
+      <div className="date-info">
+        <p>Showing financial data from {startDate} to {endDate}</p>
+        {!showFilter && (
+          <button className="btn" onClick={handleChangeRangesClick}>
+            Change date range
+          </button>
+      )}
+
+    </div>
+      <DateRangeFilter
+        onFilterChange={onFilterChange}
+        showFilter={showFilter}
+        setShowFilter={setShowFilter}
+      />
     </header>
   );
 }
