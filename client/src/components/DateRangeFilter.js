@@ -33,7 +33,7 @@ function DateRangeFilter({ onFilterChange }) {
           className="date-input"
         />
       </div>
-      <button onClick={handleFilterClick}>Filter</button>
+      <button class="btn" onClick={handleFilterClick}>Filter</button>
   </div>
   );
 }
