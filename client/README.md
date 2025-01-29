@@ -15,7 +15,7 @@ Before running the project, make sure you have:
 
 - **[Node.js](https://nodejs.org/)** (16+ recommended)
 - **[npm](https://www.npmjs.com/)** (comes with Node.js)
-- **A NeonDB PostgreSQL database** (or any PostgreSQL-compatible database)
+- **A NeonDB PostgreSQL database** 
 
 ---
 

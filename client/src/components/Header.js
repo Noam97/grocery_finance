@@ -6,6 +6,7 @@ import './style/Header.css';
 function Header({ startDate, endDate, onFilterChange }) {
   const [showFilter, setShowFilter] = useState(false);
 
+  // Toggle the visibility of the date range filter when button is clicked
   const handleChangeRangesClick = () => {
     setShowFilter(!showFilter); 
   };
