@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style/DateRangeFilter.css';
 
 function DateRangeFilter({ onFilterChange, showFilter, setShowFilter }) {
   const [startDate, setStartDate] = useState('2021-06-01');

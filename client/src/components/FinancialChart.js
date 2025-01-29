@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Chart } from 'react-google-charts';
+import './style/FinancialChart.css';
 
 function FinancialChart({ startDate, endDate }) {
   const [chartData, setChartData] = useState([
