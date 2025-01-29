@@ -51,6 +51,7 @@ body{
   font-family: 'Coiny', sans-serif; 
   font-size: 13px; 
   padding: 5px;
+  text-align: center;
 }
 
 h1{
@@ -140,11 +141,6 @@ p{
   position: relative;
 }
 
-.date-info p {
-  flex-grow: 1;
-  text-align: center;
-}
-
 .date-info .btn {
   position: absolute;
   right: -250px;
@@ -170,4 +166,20 @@ p{
   flex-direction: column;
   align-items: center;
   margin-top: 20px; 
+}
+
+.axis-text {
+  color: #333;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.axis-title {
+  color: #333;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
 }

@@ -46,13 +46,13 @@ function FinancialChart({ startDate, endDate }) {
         height="400px"
         data={chartData} 
         options={{
-          title: 'Financial Data',
           hAxis: {
             title: 'Date',
-            format: 'yyyy-MM-dd', 
+            format: 'dd/MM/yyyy', 
             gridlines: { count: 15 },
           },
           vAxis: { title: 'Amount' },
+          legend: { position: 'bottom', alignment: 'center' },
           series: {
             0: { color: 'red' },
             1: { color: 'blue' }, 

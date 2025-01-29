@@ -52,6 +52,7 @@ client.connect()
 
     app.get('/api/data', async (req, res) => {
         const { start, end } = req.query;
+        console.log(`Filtering data from ${start} to ${end}`);
         try {
           const result = await client.query(`
             SELECT DISTINCT date, income, outcome, clear

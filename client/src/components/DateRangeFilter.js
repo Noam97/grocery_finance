@@ -5,6 +5,7 @@ function DateRangeFilter({ onFilterChange, showFilter, setShowFilter }) {
   const [endDate, setEndDate] = useState('2021-12-31');
 
   const handleFilterClick = () => {
+    console.log(`Sending filter request: ${startDate} to ${endDate}`);
     onFilterChange({ startDate, endDate });
     setShowFilter(false); 
   };
@@ -19,8 +20,6 @@ function DateRangeFilter({ onFilterChange, showFilter, setShowFilter }) {
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              min="2021-06-01"
-              max="2021-12-31"
               className="date-input"
             />
           </div>
@@ -30,8 +29,6 @@ function DateRangeFilter({ onFilterChange, showFilter, setShowFilter }) {
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
-              min="2021-06-01"
-              max="2021-12-31"
               className="date-input"
             />
           </div>
