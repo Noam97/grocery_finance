@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import DateRangeFilter from './componenets/DateRangeFilter';
-import FinancialChart from './componenets/FinancialChart';
-import Header from './componenets/Header';
+import DateRangeFilter from './components/DateRangeFilter';
+import FinancialChart from './components/FinancialChart';
+import Header from './components/Header';
 import './App.css';
 
 function App() {
