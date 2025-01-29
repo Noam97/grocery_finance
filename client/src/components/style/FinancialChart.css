@@ -1,0 +1,15 @@
+.axis-text {
+    color: #333;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  .axis-title {
+    color: #333;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  }
