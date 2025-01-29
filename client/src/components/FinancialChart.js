@@ -12,31 +12,30 @@ function FinancialChart({ startDate, endDate }) {
       axios.get('http://localhost:5000/api/data', {
         params: { start: startDate, end: endDate }
       })
-      .then(response => {
-        console.log('Received data from API:', response.data); 
-        const data = response.data;
-
-        const newData = data.map(item => {
-          const date = new Date(item.date);
-          return [
-            date,
-            parseFloat(item.income),
-            parseFloat(item.outcome),
-            parseFloat(item.clear),
-          ];
-        });
-        
-        console.log('Processed data for chart:', newData);
-
-        setChartData([
-          ['Date', 'Income', 'Outcome', 'Clear'], 
-          ...newData 
-        ]);
-      })
-      .catch(error => console.error('Error fetching chart data:', error));
+        .then(response => {
+          console.log('Received data from API:', response.data);
+          const data = response.data;
+  
+          const newData = data.map(item => {
+            const date = new Date(item.date);  
+            return [
+              date,
+              parseFloat(item.income), 
+              parseFloat(item.outcome), 
+              parseFloat(item.clear), 
+            ];
+          });
+  
+          console.log('Processed data for chart:', newData);
+  
+          setChartData([
+            ['Date', 'Income', 'Outcome', 'Clear'],
+            ...newData 
+          ]);
+        })
+        .catch(error => console.error('Error fetching chart data:', error));
     }
   }, [startDate, endDate]);
-
   console.log(chartData); 
 
   return (
