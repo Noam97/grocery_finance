@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Small Grocery Shop App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **Single Page Application (SPA)** for managing and analyzing financial data of a **small grocery shop**. The application includes a **React frontend**, a **Node.js/Express backend**, and a **PostgreSQL (NeonDB) database**.
 
-## Available Scripts
+## Features
+Display daily **income, outcome, and net revenue** on a line chart  
+Filter data by **date range**  
+Store data in a **PostgreSQL database (NeonDB cloud-based)**  
+**REST API** for fetching financial data  
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Prerequisites
+Before running the project, make sure you have:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **[Node.js](https://nodejs.org/)** (16+ recommended)
+- **[npm](https://www.npmjs.com/)** (comes with Node.js)
+- **A NeonDB PostgreSQL database** (or any PostgreSQL-compatible database)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+##  Set Up the Server (Backend)
+cd server
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#Configure Environment Variables
+DB_URL=neon_database_connection_string (from .env file)
+PORT=5000
 
-### `npm run build`
+# Run the Server
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If successful, you should see:
+Server is running on http://localhost:5000
+Connected to NeonDB!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##Set Up the Client (Frontend)
+cd ../client
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Run the React App
+npm start
 
-### `npm run eject`
+If successful, you should see:
+Compiled successfully!
+You can now view the app at: http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+How to Use
+Open http://localhost:3000 in your browser.
+The default date range (1.6.2021 - 31.12.2021) loads data automatically.
+Use the date range filter to select a different period.
+Click the "Filter" button to update the chart dynamically.
